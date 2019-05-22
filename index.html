@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Геометрия для веба</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css" />
+  <style>
+    .shower {
+      --slide-ratio: calc(16 / 9);
+    }
+
+    .fullwidth {
+      width: 100%;
+    }
+
+    .gif {
+      padding-top: 0;
+    }
+
+    .gif img {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      object-fit: cover;
+      height: 100%;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+
+<body class="shower list">
+  <header class="caption">
+    <h1>Геометрия для веба</h1>
+    <p>Наталья Майстренко</p>
+  </header>
+
+  <section class="slide" id="cover">
+    <header>
+      <h2>Геометрия для веба</h2>
+      <!-- <p>Наталья Майстренко</p> -->
+    </header>
+
+    <div class="copyright right ">
+      <a href="http://https://www.freepik.com/free-vector/memphis-pattern_1177561.htm/">© vvstudio</a>
+    </div>
+    <style>
+      #cover {
+        background-image: url("./pictures/pattern.jpg");
+        background-repeat: repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      #cover h2 {
+        margin: 0;
+        text-align: center;
+        font-size: 70px;
+      }
+
+      #cover p {
+        margin: 10px 0 0;
+        text-align: center;
+        font-style: italic;
+        font-size: 20px;
+      }
+
+      #cover header {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #fff;
+        padding: 40px 0;
+      }
+    </style>
+  </section>
+
+  <section class="slide" style="padding: 0">
+    <img class="fullwidth" src="./pictures/optimism.png" alt="" />
+  </section>
+
+  <section class="slide" id="mondrian">
+    <h2 style="text-align: right">CSS Grid Layout</h2>
+    <figure>
+      <img class="cover" src="pictures/demo_mondrian.png" alt="Odemo picp" />
+      <figcaption class="copyright right black">
+        <a href="https://codepen.io/gbysea/pen/yMvpxr">© Yiorgos Voulgaris</a>
+      </figcaption>
+    </figure>
+    <style>
+      #mondrian {
+        /* width: 100%; */
+        min-height: 100%;
+      }
+
+      #mondrian h2 {
+        color: black;
+      }
+    </style>
+  </section>
+
+  <section class="slide caniuse">
+    <h2>А что с поддержкой?</h2>
+    <img class="fullwidth" src="./pictures/caniuse_grid.png" alt="" />
+  </section>
+
+  <section class="slide">
+    <h2>Shape-outside / shape-inside</h2>
+    <div class="columns two" style="grid-template-columns: 250px 1fr;">
+      <div>
+        <img src="./pictures/cssshapes_example.jpg" alt="" width="250" />
+      </div>
+      <div>
+        <p>
+          Позволяет изменить форму обтекания текста с помощью многоугольников.
+        </p>
+        <p>
+          Текст можно выстраивать как внутри, так и по внешнему контуру
+          изображения.
+        </p>
+        <p>Есть зависимость от количества символов.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Shape-outside</h2>
+    <img class="fullwidth" src="./pictures/cssshapes_poly.jpg" alt=""
+      style="width: auto; height: 80%; margin: auto; display: block;" />
+  </section>
+
+  <section class="slide">
+    <h2>Shape-outside</h2>
+    <img class="fullwidth" src="./pictures/cssshapes_r.jpg" alt=""
+      style="width: auto; height: 80%; margin: auto; display: block;" />
+  </section>
+
+  <section class="slide caniuse">
+    <h2>А что с поддержкой?</h2>
+    <img class="fullwidth" src="./pictures/caniuse_csshapes.png" alt="" />
+  </section>
+
+  <section class="slide gif">
+    <figure>
+      <img src="./pictures/gif/giphy.gif" />
+    </figure>
+  </section>
+
+  <section class="slide">
+    <h2>Clipping mask</h2>
+    <div class="columns two">
+      <ul>
+        <li>CSS property clip-path</li>
+        <li>CSS property mask</li>
+        <li>SVG &lt;clipPath&gt;</li>
+        <li>SVG &lt;mask&gt;</li>
+      </ul>
+
+      <div>
+        <img src="./pictures/gif/flash2.gif" class="clip" />
+        <style>
+          .clip {
+            width: 400px;
+            clip-path: polygon(100% 50%,
+                84.70057014808336% 54.5684167277018%,
+                91.0518476172854% 60.99980941685713%,
+                82.33578363789503% 63.39392013277814%,
+                93.30127018922194% 75%,
+                77.76736691019323% 71.30665001530522%,
+                80.05203820042827% 80.05203820042827%,
+                71.30665001530522% 77.76736691019323%,
+                75% 93.30127018922192%,
+                63.39392013277814% 82.33578363789503%,
+                60.99980941685714% 91.0518476172854%,
+                54.56841672770181% 84.70057014808336%,
+                50% 100%,
+                45.4315832722982% 84.70057014808336%,
+                39.000190583142874% 91.0518476172854%,
+                36.606079867221865% 82.33578363789505%,
+                25.00000000000001% 93.30127018922194%,
+                28.693349984694787% 77.76736691019323%,
+                19.947961799571733% 80.05203820042827%,
+                22.23263308980677% 71.30665001530522%,
+                6.698729810778076% 75.00000000000001%,
+                17.664216362104966% 63.39392013277815%,
+                8.948152382714603% 60.99980941685715%,
+                15.299429851916635% 54.568416727701816%,
+                0% 50.00000000000001%,
+                15.299429851916635% 45.431583272298205%,
+                8.94815238271459% 39.00019058314288%,
+                17.66421636210496% 36.60607986722188%,
+                6.698729810778062% 25.000000000000014%,
+                22.23263308980676% 28.693349984694787%,
+                19.947961799571715% 19.947961799571747%,
+                28.69334998469477% 22.232633089806775%,
+                24.99999999999998% 6.698729810778083%,
+                36.60607986722184% 17.664216362104973%,
+                39.00019058314284% 8.948152382714603%,
+                45.43158327229816% 15.299429851916642%,
+                49.99999999999999% 0%,
+                54.568416727701795% 15.299429851916635%,
+                60.99980941685711% 8.94815238271459%,
+                63.39392013277812% 17.66421636210496%,
+                74.99999999999997% 6.6987298107780475%,
+                71.3066500153052% 22.23263308980675%,
+                80.05203820042826% 19.947961799571722%,
+                77.76736691019323% 28.69334998469477%,
+                93.30127018922192% 24.99999999999998%,
+                82.33578363789502% 36.60607986722184%,
+                91.0518476172854% 39.00019058314283%,
+                84.70057014808336% 45.43158327229816%);
+            animation: clip 1s infinite;
+          }
+
+          @keyframes clip {
+            0% {
+              clip-path: polygon(100% 50%,
+                  84.70057014808336% 54.5684167277018%,
+                  91.0518476172854% 60.99980941685713%,
+                  82.33578363789503% 63.39392013277814%,
+                  93.30127018922194% 75%,
+                  77.76736691019323% 71.30665001530522%,
+                  80.05203820042827% 80.05203820042827%,
+                  71.30665001530522% 77.76736691019323%,
+                  75% 93.30127018922192%,
+                  63.39392013277814% 82.33578363789503%,
+                  60.99980941685714% 91.0518476172854%,
+                  54.56841672770181% 84.70057014808336%,
+                  50% 100%,
+                  45.4315832722982% 84.70057014808336%,
+                  39.000190583142874% 91.0518476172854%,
+                  36.606079867221865% 82.33578363789505%,
+                  25.00000000000001% 93.30127018922194%,
+                  28.693349984694787% 77.76736691019323%,
+                  19.947961799571733% 80.05203820042827%,
+                  22.23263308980677% 71.30665001530522%,
+                  6.698729810778076% 75.00000000000001%,
+                  17.664216362104966% 63.39392013277815%,
+                  8.948152382714603% 60.99980941685715%,
+                  15.299429851916635% 54.568416727701816%,
+                  0% 50.00000000000001%,
+                  15.299429851916635% 45.431583272298205%,
+                  8.94815238271459% 39.00019058314288%,
+                  17.66421636210496% 36.60607986722188%,
+                  6.698729810778062% 25.000000000000014%,
+                  22.23263308980676% 28.693349984694787%,
+                  19.947961799571715% 19.947961799571747%,
+                  28.69334998469477% 22.232633089806775%,
+                  24.99999999999998% 6.698729810778083%,
+                  36.60607986722184% 17.664216362104973%,
+                  39.00019058314284% 8.948152382714603%,
+                  45.43158327229816% 15.299429851916642%,
+                  49.99999999999999% 0%,
+                  54.568416727701795% 15.299429851916635%,
+                  60.99980941685711% 8.94815238271459%,
+                  63.39392013277812% 17.66421636210496%,
+                  74.99999999999997% 6.6987298107780475%,
+                  71.3066500153052% 22.23263308980675%,
+                  80.05203820042826% 19.947961799571722%,
+                  77.76736691019323% 28.69334998469477%,
+                  93.30127018922192% 24.99999999999998%,
+                  82.33578363789502% 36.60607986722184%,
+                  91.0518476172854% 39.00019058314283%,
+                  84.70057014808336% 45.43158327229816%);
+            }
+
+            50% {
+              clip-path: polygon(84.70057014808336% 54.5684167277018%,
+                  91.0518476172854% 60.99980941685713%,
+                  82.33578363789503% 63.39392013277814%,
+                  93.30127018922194% 75%,
+                  77.76736691019323% 71.30665001530522%,
+                  80.05203820042827% 80.05203820042827%,
+                  71.30665001530522% 77.76736691019323%,
+                  75% 93.30127018922192%,
+                  63.39392013277814% 82.33578363789503%,
+                  60.99980941685714% 91.0518476172854%,
+                  54.56841672770181% 84.70057014808336%,
+                  50% 100%,
+                  45.4315832722982% 84.70057014808336%,
+                  39.000190583142874% 91.0518476172854%,
+                  36.606079867221865% 82.33578363789505%,
+                  25.00000000000001% 93.30127018922194%,
+                  28.693349984694787% 77.76736691019323%,
+                  19.947961799571733% 80.05203820042827%,
+                  22.23263308980677% 71.30665001530522%,
+                  6.698729810778076% 75.00000000000001%,
+                  17.664216362104966% 63.39392013277815%,
+                  8.948152382714603% 60.99980941685715%,
+                  15.299429851916635% 54.568416727701816%,
+                  0% 50.00000000000001%,
+                  15.299429851916635% 45.431583272298205%,
+                  8.94815238271459% 39.00019058314288%,
+                  17.66421636210496% 36.60607986722188%,
+                  6.698729810778062% 25.000000000000014%,
+                  22.23263308980676% 28.693349984694787%,
+                  19.947961799571715% 19.947961799571747%,
+                  28.69334998469477% 22.232633089806775%,
+                  24.99999999999998% 6.698729810778083%,
+                  36.60607986722184% 17.664216362104973%,
+                  39.00019058314284% 8.948152382714603%,
+                  45.43158327229816% 15.299429851916642%,
+                  49.99999999999999% 0%,
+                  54.568416727701795% 15.299429851916635%,
+                  60.99980941685711% 8.94815238271459%,
+                  63.39392013277812% 17.66421636210496%,
+                  74.99999999999997% 6.6987298107780475%,
+                  71.3066500153052% 22.23263308980675%,
+                  80.05203820042826% 19.947961799571722%,
+                  77.76736691019323% 28.69334998469477%,
+                  93.30127018922192% 24.99999999999998%,
+                  82.33578363789502% 36.60607986722184%,
+                  91.0518476172854% 39.00019058314283%,
+                  84.70057014808336% 45.43158327229816%,
+                  100% 50%);
+            }
+
+            100% {
+              clip-path: polygon(91.0518476172854% 60.99980941685713%,
+                  82.33578363789503% 63.39392013277814%,
+                  93.30127018922194% 75%,
+                  77.76736691019323% 71.30665001530522%,
+                  80.05203820042827% 80.05203820042827%,
+                  71.30665001530522% 77.76736691019323%,
+                  75% 93.30127018922192%,
+                  63.39392013277814% 82.33578363789503%,
+                  60.99980941685714% 91.0518476172854%,
+                  54.56841672770181% 84.70057014808336%,
+                  50% 100%,
+                  45.4315832722982% 84.70057014808336%,
+                  39.000190583142874% 91.0518476172854%,
+                  36.606079867221865% 82.33578363789505%,
+                  25.00000000000001% 93.30127018922194%,
+                  28.693349984694787% 77.76736691019323%,
+                  19.947961799571733% 80.05203820042827%,
+                  22.23263308980677% 71.30665001530522%,
+                  6.698729810778076% 75.00000000000001%,
+                  17.664216362104966% 63.39392013277815%,
+                  8.948152382714603% 60.99980941685715%,
+                  15.299429851916635% 54.568416727701816%,
+                  0% 50.00000000000001%,
+                  15.299429851916635% 45.431583272298205%,
+                  8.94815238271459% 39.00019058314288%,
+                  17.66421636210496% 36.60607986722188%,
+                  6.698729810778062% 25.000000000000014%,
+                  22.23263308980676% 28.693349984694787%,
+                  19.947961799571715% 19.947961799571747%,
+                  28.69334998469477% 22.232633089806775%,
+                  24.99999999999998% 6.698729810778083%,
+                  36.60607986722184% 17.664216362104973%,
+                  39.00019058314284% 8.948152382714603%,
+                  45.43158327229816% 15.299429851916642%,
+                  49.99999999999999% 0%,
+                  54.568416727701795% 15.299429851916635%,
+                  60.99980941685711% 8.94815238271459%,
+                  63.39392013277812% 17.66421636210496%,
+                  74.99999999999997% 6.6987298107780475%,
+                  71.3066500153052% 22.23263308980675%,
+                  80.05203820042826% 19.947961799571722%,
+                  77.76736691019323% 28.69334998469477%,
+                  93.30127018922192% 24.99999999999998%,
+                  82.33578363789502% 36.60607986722184%,
+                  91.0518476172854% 39.00019058314283%,
+                  84.70057014808336% 45.43158327229816%,
+                  100% 50%,
+                  84.70057014808336% 54.5684167277018%);
+            }
+          }
+        </style>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>CSS clip-path + Grid layout</h2>
+    <div class="columns two" style="grid-template-columns: 1fr 400px; grid-column-gap: 15px;">
+      <div>
+        <p>
+          Cоздает ограниченную область, которая определяет какая часть
+          элемента должна быть видимой.
+        </p>
+        <p>
+          Обрезанная область определяется либо как внутренняя ссылка, либо как
+          внешний SVG , либо как фигура, такая как круг (circle()).
+        </p>
+      </div>
+      <div>
+        <img src="./pictures/demo_clippath.png" alt="" width="400" />
+        <figcaption class="copyright right black">
+          <a href="https://codepen.io/rrenula/details/LzLXYJ">© Aysha Anggraini</a>
+        </figcaption>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide caniuse">
+    <h2>CSS clip-path</h2>
+    <img class="fullwidth" src="./pictures/caniuse_clippath.png" alt="" />
+  </section>
+
+  <section class="slide caniuse">
+    <h2>SVG masks and filters</h2>
+    <img class="fullwidth" src="./pictures/caniuse_svg.png" alt="" />
+  </section>
+
+  <section class="slide" id="clippingmask">
+    <h2>Morphing SVG Clipping mask</h2>
+    <figure>
+      <img class="cover" src="pictures/mask_morphing.png" alt="" />
+      <figcaption class="copyright right black">
+        <a href="https://codepen.io/altescape/pen/gLRRxN">© Michael Watts</a>
+      </figcaption>
+    </figure>
+    <style>
+      #clippingmask {
+        background: #d6316f;
+      }
+
+      #clippingmask h2 {
+        color: black;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="clippingmask2">
+    <h2>SVG clipping mask</h2>
+    <figure>
+      <img class="cover" src="pictures/mask_clip.png" alt="" />
+      <figcaption class="copyright right">
+        <a href="https://codepen.io/chrisgannon/pen/QbLMxz">© Chris Gannon</a>
+      </figcaption>
+    </figure>
+    <style>
+      #clippingmask2 {
+        background: #111;
+      }
+
+      #clippingmask2 h2,
+      #clippingmask2 a {
+        color: white;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="clippingmask3">
+    <h2>SVG clipping mask</h2>
+    <figure>
+      <img class="cover" src="pictures/mask_clip2.png" alt="" />
+      <figcaption class="copyright right black">
+        <a href="https://codepen.io/noeldelgado/pen/ByxQjL">© Noel Delgado</a>
+      </figcaption>
+    </figure>
+    <style>
+      #clippingmask3 {
+        background: #e7e7e8;
+      }
+
+      #clippingmask3 h2 {
+        color: black;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="see-more">
+    <h2 class="shout">
+      Спасибо за внимание :)
+    </h2>
+    <style>
+      #see-more h2 {
+        font-size: 100px;
+      }
+    </style>
+  </section>
+
+  <section class="slide">
+    <h2>Несколько полезных ссылок</h2>
+    <ul>
+      <li>
+        <a href="https://medium.com/@andybarefoot/stretching-the-grid-5-fun-ways-to-use-css-grid-5931166f467f">Stretching
+          the Grid — 6 fun ways to use CSS Grid</a>
+      </li>
+      <li>
+        <a href="https://tympanus.net/codrops/2018/11/29/an-introduction-to-css-shapes/">An Introduction to CSS
+          Shapes</a>
+      </li>
+      <li>
+        <a href="https://www.smashingmagazine.com/2015/12/animating-clipped-elements-svg/">Animating Clipped Elements In
+          SVG</a>
+      </li>
+      <li>
+        <a href="https://css-tricks.com/masking-vs-clipping-use">Masking vs. Clipping: When to Use Each</a>
+      </li>
+      <li>
+        <a href="https://css-tricks.com/animate-calligraphy-with-svg/">Animate Calligraphy with SVG</a>
+      </li>
+    </ul>
+  </section>
+
+  <footer class="badge">
+    <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+  </footer>
+
+  <div class="progress"></div>
+
+  <script src="shower/shower.min.js"></script>
+  <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
+</body>
+
+</html>
